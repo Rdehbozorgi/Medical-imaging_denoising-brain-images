@@ -53,20 +53,38 @@ These are just a few examples of the many noise reduction algorithms available i
 
 
 To improve the quality of MRI images and reduce noise and artifacts, various denoising and artifact removal methods have been developed. One common approach is the Fourier Transform method (FFT), which uses mathematical algorithms to remove noise and other unwanted signals from the MRI data.
-Here, I use Fourier transform by 3dguassian filtering for each image by changing a parameter named sigma. The following figure is reported for sigma=75. 
+Here, I use Fourier transform by 3dguassian filtering for each image. 
 
-![Test Image 2](75.png)
-
-
-let consider sigma= 15, then you can see the smoothness of this transformation. 
-
-![Test Image 2](15.png)
+![Test Image 1](75.png)
 
 
 In summary, MRI is a powerful imaging technique used to diagnose and monitor various diseases and conditions affecting the brain and other organs. Different types of MRI sequences are used to visualize different aspects of the brain and other tissues. However, the quality of MRI images can be affected by noise and other artifacts, and various methods have been developed to improve image quality and reduce noise and artifacts.
+#
+
+
+
+### Denoise by nlmeans 
+
+The dipy.denoise.nlmeans.nlmeans method in Python is a non-local means denoising algorithm that is based on the principle of similarity between image patches. The algorithm uses a sliding window approach to estimate the noise level in each patch of the image, and then applies a weighted averaging operation to each patch to reduce the noise.
+
+The non-local means algorithm works by assuming that similar image patches have similar noise levels, and therefore can be averaged together to reduce the noise. In the nlmeans method, the algorithm computes a distance matrix between all pairs of patches in the image, based on the Euclidean distance between their pixel intensity values. The distance matrix is then used to compute a set of weights for each patch, which reflect the similarity between the patch and its neighbors.
+
+Once the weights are computed, the algorithm applies a weighted averaging operation to each patch, where the weight of each neighboring patch is multiplied by its corresponding pixel intensity value, and the resulting products are summed and divided by the total weight of all neighboring patches. This process is repeated for each patch in the image, resulting in a denoised image.
+
+The nlmeans method in dipy.denoise.nlmeans is a Python implementation of the non-local means algorithm, and is designed to be fast and memory-efficient for processing large medical imaging datasets. It supports a range of input data types, including 2D and 3D images, as well as multi-channel images, and can be used to denoise a wide variety of medical imaging modalities, such as MRI and CT.
+
+Overall, the nlmeans method in dipy.denoise.nlmeans provides a powerful and flexible tool for removing noise from medical images, and can be easily incorporated into existing Python workflows for image processing and analysis.
+
+
+
+![Test Image 1](swi.png)
+
+
 
 
 #
+
+
 
 ### Contrast meseaures
 
@@ -88,8 +106,4 @@ where p(i) represents the probability of a given pixel intensity value occurring
 In practice, the contrast entropy value can be calculated for an entire image or for specific regions of interest within the image. Higher contrast entropy values indicate greater variability in pixel intensity and thus a greater degree of randomness or disorder within the image. Conversely, lower contrast entropy values indicate a more uniform distribution of pixel intensity values and thus a greater degree of regularity or homogeneity within the image.
 
 Contrast entropy is often used as a feature for image classification, segmentation, and analysis in a variety of applications, including medical imaging, remote sensing, and computer vision. It provides a measure of the complexity and heterogeneity of an image that can be used to differentiate between different types of tissues or structures within the image.
-
-
-
-
 
