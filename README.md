@@ -55,7 +55,7 @@ These are just a few examples of the many noise reduction algorithms available i
 To improve the quality of MRI images and reduce noise and artifacts, various denoising and artifact removal methods have been developed. One common approach is the Fourier Transform method (FFT), which uses mathematical algorithms to remove noise and other unwanted signals from the MRI data.
 Here, I use Fourier transform by 3dguassian filtering for each image. 
 
-![Test Image 1](2.jpg)
+![Test Image 1](75.jpg)
 
 
 In summary, MRI is a powerful imaging technique used to diagnose and monitor various diseases and conditions affecting the brain and other organs. Different types of MRI sequences are used to visualize different aspects of the brain and other tissues. However, the quality of MRI images can be affected by noise and other artifacts, and various methods have been developed to improve image quality and reduce noise and artifacts.
