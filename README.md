@@ -20,6 +20,9 @@ DWI is a type of MRI sequence that is particularly sensitive to the movement of 
 #### Blood oxygen level-dependent (BOLD)
 BOLD imaging is a specialized MRI technique used to visualize changes in the oxygenation of blood in response to neural activity. BOLD imaging is widely used in functional MRI studies to identify the areas of the brain that are activated during different tasks and activities.
 
+
+![Test Image 1](1.png)
+
 #### signal-to-noise ratio (SNR)
 One of the major challenges in MRI imaging is the presence of noise, which can degrade the quality of the images and reduce their diagnostic value. The SNR is a measure of the quality of the MRI signal relative to the level of background noise.
  
